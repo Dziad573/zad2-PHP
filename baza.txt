@@ -1,0 +1,8 @@
+1. CREATE TABLE `wynajem`.`pokoje` ( `id` INT NOT NULL , `nazwa` VARCHAR(20) NOT NULL , `cena` FLOAT NOT NULL );
+2. ALTER TABLE `pokoje` ADD PRIMARY KEY(`id`);
+3. INSERT INTO `pokoje` (`id`, `nazwa`, `cena`) VALUES ('1', 'jednoosobowy', '100'), ('2', 'dwuosobowy', '170'), ('3', 'trzyosobowy', '210');
+4. 
+5. SELECT id_pok, SUM(liczba_dn) FROM `rezerwacje` GROUP BY id_pok;
+6. SELECT SUM(liczba_dn) FROM `rezerwacje` WHERE sezon = 'lato';
+7. UPDATE pokoje SET cena = cena*1.15;
+8. CREATE USER 'najemca'@'localhost' IDENTIFIED BY 'n@JEM1@!';
